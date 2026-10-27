@@ -17,7 +17,7 @@ COMPLAINTS = list(Complaint)
 
 
 def _u8(x: float) -> int:
-    return max(0, min(255, int(round(x))))
+    return max(0, min(255, round(x)))
 
 
 def encode(report: PatientReport, device_id: int) -> bytes:

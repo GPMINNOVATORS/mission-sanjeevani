@@ -68,8 +68,7 @@ def triage(report: PatientReport) -> TriageResult:
 
     def escalate(to: TriageLevel, why: str) -> None:
         nonlocal level
-        if to > level:
-            level = to
+        level = max(level, to)
         reasons.append(why)
 
     c = report.complaint

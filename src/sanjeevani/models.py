@@ -43,7 +43,7 @@ class PatientReport:
     timestamp: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
 
     @classmethod
-    def from_dict(cls, d: dict) -> "PatientReport":
+    def from_dict(cls, d: dict) -> PatientReport:
         return cls(
             patient_id=d["patient_id"],
             vitals=Vitals(**d["vitals"]),

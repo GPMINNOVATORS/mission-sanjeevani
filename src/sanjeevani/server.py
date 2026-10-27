@@ -40,7 +40,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    def do_GET(self) -> None:  # noqa: N802
+    def do_GET(self) -> None:
         if self.path in ("/", "/index.html"):
             self._send(200, PAGE.encode(), "text/html; charset=utf-8")
         elif self.path == "/health":
@@ -48,7 +48,7 @@ class Handler(BaseHTTPRequestHandler):
         else:
             self._send(404, b'{"error":"not found"}', "application/json")
 
-    def do_POST(self) -> None:  # noqa: N802
+    def do_POST(self) -> None:
         if self.path != "/api/assess":
             return self._send(404, b'{"error":"not found"}', "application/json")
         try:
