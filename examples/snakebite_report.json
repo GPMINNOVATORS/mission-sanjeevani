@@ -1,0 +1,7 @@
+{
+  "patient_id": "P-0001",
+  "complaint": "snakebite",
+  "age": 34,
+  "vitals": {"heart_rate": 112, "resp_rate": 22, "spo2": 94, "systolic_bp": 105, "temperature_c": 37.2, "consciousness": "alert"},
+  "location": {"lat": 25.55, "lon": 85.20}
+}
